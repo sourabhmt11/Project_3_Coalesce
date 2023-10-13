@@ -1,7 +1,11 @@
 defaultStorageMapping: TARGET
 installedPackages: {}
 jobs: {}
-locations: {}
+locations:
+  SOURCE:
+    mappingDefinitions: {}
+  TARGET:
+    mappingDefinitions: {}
 macros: {}
 packages: {}
 projects: {}
