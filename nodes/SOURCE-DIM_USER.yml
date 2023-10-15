@@ -23,7 +23,7 @@ steps:
             hashDetails: null
             isBusinessKey: true
             name: USERID
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 1c997bbc-909c-4349-a820-c22d2e14614e

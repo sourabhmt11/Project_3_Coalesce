@@ -1,4 +1,4 @@
-defaultStorageMapping: SOURCE
+defaultStorageMapping: TARGET
 installedPackages: {}
 jobs: {}
 locations:
@@ -10,8 +10,8 @@ locations:
   TARGET:
     mappingDefinitions:
       "13":
-        database: TGT_SONG_ANALYSYS_DATA
-        schema: SCHEMA_TGT_SONG_ANALYSYS
+        database: QAENVIRONMENT
+        schema: QATESTING
 macros: {}
 packages: {}
 projects: {}
