@@ -1,0 +1,123 @@
+steps:
+  DIM-ARTISTS-009af26b-41fa-4905-ad47-d8797d728c58:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: SOURCE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 0fcdea44-d2ad-441f-b611-180a0d7de385
+              stepCounter: 009af26b-41fa-4905-ad47-d8797d728c58
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: ARTIST_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7dc19999-9896-429a-8721-2f1b22eb9aa8
+                    stepCounter: 60c2890f-aa10-4e2d-9b79-b7c81dc3ecd6
+                transform: ""
+          - columnReference:
+              columnCounter: 4d083200-3428-4a54-be2a-06fe2d2d4152
+              stepCounter: 009af26b-41fa-4905-ad47-d8797d728c58
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ARTIST_LATITUDE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1c34ad14-5e51-43ab-835b-6c3993511c51
+                    stepCounter: 60c2890f-aa10-4e2d-9b79-b7c81dc3ecd6
+                transform: ""
+          - columnReference:
+              columnCounter: b4ca005f-2e67-4a18-b1c4-54647c575d4f
+              stepCounter: 009af26b-41fa-4905-ad47-d8797d728c58
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ARTIST_LONGITUDE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3abbfa88-b17a-4157-81a7-64012f6003d0
+                    stepCounter: 60c2890f-aa10-4e2d-9b79-b7c81dc3ecd6
+                transform: ""
+          - columnReference:
+              columnCounter: 186811fa-113f-42b1-a33b-bb775876f8bd
+              stepCounter: 009af26b-41fa-4905-ad47-d8797d728c58
+            dataType: VARCHAR(500)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ARTIST_LOCATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 64216667-7297-4e1c-a7a1-d8d2cb1c4c7d
+                    stepCounter: 60c2890f-aa10-4e2d-9b79-b7c81dc3ecd6
+                transform: ""
+          - columnReference:
+              columnCounter: d2dc093d-1b40-4ef0-957c-cc867efdd5af
+              stepCounter: 009af26b-41fa-4905-ad47-d8797d728c58
+            dataType: VARCHAR(500)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ARTIST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 774ce466-f1c5-4658-9780-084eb3302d20
+                    stepCounter: 60c2890f-aa10-4e2d-9b79-b7c81dc3ecd6
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d8b99ce6-d93e-4967-a492-0a5d279b6beb
+              stepCounter: 009af26b-41fa-4905-ad47-d8797d728c58
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: STG_STAGING_SONGS
+            join:
+              joinCondition: FROM {{ ref('SOURCE', 'STG_STAGING_SONGS') }} "STG_STAGING_SONGS"
+            name: DIM-ARTISTS
+            noLinkRefs: []
+      name: DIM-ARTISTS
+      overrideSQL: false
+      schema: ""
+      sqlType: Dimension
+      type: sql
+    stepCounter: 009af26b-41fa-4905-ad47-d8797d728c58

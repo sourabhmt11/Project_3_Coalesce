@@ -1,0 +1,151 @@
+steps:
+  DIM_TIME-ab454155-8b5a-4101-bbc4-9b5ac021fa28:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: SOURCE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 74b625d9-9247-4c13-83d7-7dd664dae508
+              stepCounter: ab454155-8b5a-4101-bbc4-9b5ac021fa28
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: START_TIME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d84d508a-7328-4c47-8470-c301bd0e62cd
+                    stepCounter: 3e6b687b-df8e-46b4-9845-a38e88c789a8
+                transform: "TO_TIMESTAMP(DATEADD(SECOND, \"STG_STAGING_EVENTS\".\"TS\"/ 1000, '1970-01-01 00:00:00')) "
+          - columnReference:
+              columnCounter: 94a609db-7d30-4866-8020-615836a9da94
+              stepCounter: ab454155-8b5a-4101-bbc4-9b5ac021fa28
+            dataType: INT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HOUR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d84d508a-7328-4c47-8470-c301bd0e62cd
+                    stepCounter: 3e6b687b-df8e-46b4-9845-a38e88c789a8
+                transform: EXTRACT(hour FROM TO_TIMESTAMP(DATEADD(SECOND, "STG_STAGING_EVENTS"."TS"/ 1000, '1970-01-01 00:00:00')) )
+          - columnReference:
+              columnCounter: feb45714-fc80-4f1c-a251-10d6976438bd
+              stepCounter: ab454155-8b5a-4101-bbc4-9b5ac021fa28
+            dataType: INT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d84d508a-7328-4c47-8470-c301bd0e62cd
+                    stepCounter: 3e6b687b-df8e-46b4-9845-a38e88c789a8
+                transform: EXTRACT(day  FROM TO_TIMESTAMP(DATEADD(SECOND, "STG_STAGING_EVENTS"."TS"/ 1000, '1970-01-01 00:00:00')) )
+          - columnReference:
+              columnCounter: e5aef5cc-719e-4531-bf8f-9ab3f5061118
+              stepCounter: ab454155-8b5a-4101-bbc4-9b5ac021fa28
+            dataType: INT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: WEEK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d84d508a-7328-4c47-8470-c301bd0e62cd
+                    stepCounter: 3e6b687b-df8e-46b4-9845-a38e88c789a8
+                transform: EXTRACT(week FROM TO_TIMESTAMP(DATEADD(SECOND, "STG_STAGING_EVENTS"."TS"/ 1000, '1970-01-01 00:00:00')) )
+          - columnReference:
+              columnCounter: 0a2720e0-c4db-4f63-8aa4-360c87f5d32f
+              stepCounter: ab454155-8b5a-4101-bbc4-9b5ac021fa28
+            dataType: INT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MONTH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d84d508a-7328-4c47-8470-c301bd0e62cd
+                    stepCounter: 3e6b687b-df8e-46b4-9845-a38e88c789a8
+                transform: EXTRACT(MONTH FROM TO_TIMESTAMP(DATEADD(SECOND, "STG_STAGING_EVENTS"."TS"/ 1000, '1970-01-01 00:00:00')) )
+          - columnReference:
+              columnCounter: eaad36dd-c106-4cc9-ac09-f62ac0a592f8
+              stepCounter: ab454155-8b5a-4101-bbc4-9b5ac021fa28
+            dataType: INT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: YEAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d84d508a-7328-4c47-8470-c301bd0e62cd
+                    stepCounter: 3e6b687b-df8e-46b4-9845-a38e88c789a8
+                transform: EXTRACT(YEAR FROM TO_TIMESTAMP(DATEADD(SECOND, "STG_STAGING_EVENTS"."TS"/ 1000, '1970-01-01 00:00:00')) )
+          - columnReference:
+              columnCounter: 333d0b00-e640-4912-9363-a22e491a579f
+              stepCounter: ab454155-8b5a-4101-bbc4-9b5ac021fa28
+            dataType: INT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: WEEKDAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d84d508a-7328-4c47-8470-c301bd0e62cd
+                    stepCounter: 3e6b687b-df8e-46b4-9845-a38e88c789a8
+                transform: EXTRACT(WEEK FROM TO_TIMESTAMP(DATEADD(SECOND, "STG_STAGING_EVENTS"."TS"/ 1000, '1970-01-01 00:00:00')) )
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a1be4a36-0463-4f10-889b-3d1fa6e61d64
+              stepCounter: ab454155-8b5a-4101-bbc4-9b5ac021fa28
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: STG_STAGING_EVENTS
+            join:
+              joinCondition: FROM {{ ref('SOURCE', 'STG_STAGING_EVENTS') }} "STG_STAGING_EVENTS"
+            name: DIM_TIME
+            noLinkRefs: []
+      name: DIM_TIME
+      overrideSQL: false
+      schema: ""
+      sqlType: Dimension
+      type: sql
+    stepCounter: ab454155-8b5a-4101-bbc4-9b5ac021fa28

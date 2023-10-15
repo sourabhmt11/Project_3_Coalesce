@@ -1,0 +1,123 @@
+steps:
+  DIM_USER-4d729e15-efe5-474b-9658-20d62e5a2316:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: SOURCE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 5eb9c148-6fe9-4a79-9178-600705777234
+              stepCounter: 4d729e15-efe5-474b-9658-20d62e5a2316
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: USERID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1c997bbc-909c-4349-a820-c22d2e14614e
+                    stepCounter: 3e6b687b-df8e-46b4-9845-a38e88c789a8
+                transform: ""
+          - columnReference:
+              columnCounter: 8428f4d0-b9d5-498b-985c-d8da46f57689
+              stepCounter: 4d729e15-efe5-474b-9658-20d62e5a2316
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: FIRSTNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2f111688-16a5-4117-8869-db2b13fe8ec3
+                    stepCounter: 3e6b687b-df8e-46b4-9845-a38e88c789a8
+                transform: ""
+          - columnReference:
+              columnCounter: 2caf987d-9a7b-4292-9962-7144bd49462f
+              stepCounter: 4d729e15-efe5-474b-9658-20d62e5a2316
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4a2dea80-4c1a-4ff3-b843-951a2aa87e67
+                    stepCounter: 3e6b687b-df8e-46b4-9845-a38e88c789a8
+                transform: ""
+          - columnReference:
+              columnCounter: b8f2cdd1-def3-4fce-9683-0d93b6da4ed8
+              stepCounter: 4d729e15-efe5-474b-9658-20d62e5a2316
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: GENDER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 87ac8a12-bcf7-49ed-94e8-a695bf25e8a2
+                    stepCounter: 3e6b687b-df8e-46b4-9845-a38e88c789a8
+                transform: ""
+          - columnReference:
+              columnCounter: f3f8b00c-22f1-410d-ba4f-9a88ea40b2c6
+              stepCounter: 4d729e15-efe5-474b-9658-20d62e5a2316
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0f3bb543-78d4-4d9f-bd96-1ef061edb925
+                    stepCounter: 3e6b687b-df8e-46b4-9845-a38e88c789a8
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bb9e88fb-6c05-4213-9d2a-4a407fd2aa3c
+              stepCounter: 4d729e15-efe5-474b-9658-20d62e5a2316
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: STG_STAGING_EVENTS
+            join:
+              joinCondition: FROM {{ ref('SOURCE', 'STG_STAGING_EVENTS') }} "STG_STAGING_EVENTS"
+            name: DIM_USER
+            noLinkRefs: []
+      name: DIM_USER
+      overrideSQL: false
+      schema: ""
+      sqlType: Dimension
+      type: sql
+    stepCounter: 4d729e15-efe5-474b-9658-20d62e5a2316

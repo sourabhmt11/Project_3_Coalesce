@@ -1,10 +1,10 @@
 steps:
-  PART-e80b2fb1-33c1-4f16-a189-64b26bfd513a:
+  STAGING_SONGS-9a437bd9-ff3d-4581-8f9d-9cac9b8637c5:
     operation:
       database: ""
       dataset: ""
       deployEnabled: true
-      description: Part data as defined by TPC-H
+      description: ""
       locationID: ""
       locationName: SOURCE
       metadata:
@@ -14,14 +14,14 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5306604f-08e8-4787-afb2-52b91bc4c357
-              stepCounter: e80b2fb1-33c1-4f16-a189-64b26bfd513a
+              columnCounter: e06a7bd7-7860-4e66-b35b-8acf7b6abd18
+              stepCounter: 9a437bd9-ff3d-4581-8f9d-9cac9b8637c5
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: P_PARTKEY
-            nullable: false
+            name: NUM_SONGS
+            nullable: true
             primaryKey: false
             uniqueKey: false
           - acceptedValues:
@@ -29,29 +29,29 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 6aa1b2ab-5db4-4f3e-afe5-ef868e8afdd8
-              stepCounter: e80b2fb1-33c1-4f16-a189-64b26bfd513a
+              columnCounter: c6c9468a-ba44-4cc2-a1d9-ac818ca01b6e
+              stepCounter: 9a437bd9-ff3d-4581-8f9d-9cac9b8637c5
             config: {}
-            dataType: VARCHAR(55)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: P_NAME
+            name: ARTIST_ID
             nullable: false
-            primaryKey: false
+            primaryKey: true
             uniqueKey: false
           - acceptedValues:
               strictMatch: true
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 867bfafe-c581-429d-84a2-93a52fc4ae6b
-              stepCounter: e80b2fb1-33c1-4f16-a189-64b26bfd513a
+              columnCounter: 1ae75fc6-be0a-42ad-8508-701f8a7daa7b
+              stepCounter: 9a437bd9-ff3d-4581-8f9d-9cac9b8637c5
             config: {}
-            dataType: VARCHAR(25)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: P_MFGR
-            nullable: false
+            name: ARTIST_LATITUDE
+            nullable: true
             primaryKey: false
             uniqueKey: false
           - acceptedValues:
@@ -59,14 +59,14 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: e095dcd5-8e35-4ddd-845d-84e0afcd5209
-              stepCounter: e80b2fb1-33c1-4f16-a189-64b26bfd513a
+              columnCounter: a0d9b1cb-8d8c-4c6d-84ea-1f1a4686911c
+              stepCounter: 9a437bd9-ff3d-4581-8f9d-9cac9b8637c5
             config: {}
-            dataType: VARCHAR(10)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: P_BRAND
-            nullable: false
+            name: ARTIST_LONGITUDE
+            nullable: true
             primaryKey: false
             uniqueKey: false
           - acceptedValues:
@@ -74,13 +74,43 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: cc429692-2f67-4eac-b582-ceb4597a8899
-              stepCounter: e80b2fb1-33c1-4f16-a189-64b26bfd513a
+              columnCounter: a98560a0-c86a-4d57-a7c9-62d5d18ccf0b
+              stepCounter: 9a437bd9-ff3d-4581-8f9d-9cac9b8637c5
             config: {}
-            dataType: VARCHAR(25)
+            dataType: VARCHAR(500)
             defaultValue: ""
             description: ""
-            name: P_TYPE
+            name: ARTIST_LOCATION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b00ef9e5-ede6-4462-902e-47303c51cd17
+              stepCounter: 9a437bd9-ff3d-4581-8f9d-9cac9b8637c5
+            config: {}
+            dataType: VARCHAR(500)
+            defaultValue: ""
+            description: ""
+            name: ARTIST_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b7c0bf7f-c69b-4d2c-8432-51ed4dcab52c
+              stepCounter: 9a437bd9-ff3d-4581-8f9d-9cac9b8637c5
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: SONG_ID
             nullable: false
             primaryKey: false
             uniqueKey: false
@@ -89,66 +119,51 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 091f1c02-0e25-4a58-bcc0-c9520601c92d
-              stepCounter: e80b2fb1-33c1-4f16-a189-64b26bfd513a
+              columnCounter: e33b8f1a-ec51-4953-b7d6-9710eca139c7
+              stepCounter: 9a437bd9-ff3d-4581-8f9d-9cac9b8637c5
+            config: {}
+            dataType: VARCHAR(500)
+            defaultValue: ""
+            description: ""
+            name: TITLE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c542a725-e678-4e70-ba0c-7696f63697f7
+              stepCounter: 9a437bd9-ff3d-4581-8f9d-9cac9b8637c5
+            config: {}
+            dataType: NUMBER(9,2)
+            defaultValue: ""
+            description: ""
+            name: DURATION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9154126b-b2c7-4b1c-a498-b3aa1cccfb76
+              stepCounter: 9a437bd9-ff3d-4581-8f9d-9cac9b8637c5
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: P_SIZE
-            nullable: false
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: bd82b615-c473-4434-a621-6a1ca06b367c
-              stepCounter: e80b2fb1-33c1-4f16-a189-64b26bfd513a
-            config: {}
-            dataType: VARCHAR(10)
-            defaultValue: ""
-            description: ""
-            name: P_CONTAINER
-            nullable: false
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 8375d881-788b-48d9-8a2e-e0aeea52c862
-              stepCounter: e80b2fb1-33c1-4f16-a189-64b26bfd513a
-            config: {}
-            dataType: NUMBER(12,2)
-            defaultValue: ""
-            description: ""
-            name: P_RETAILPRICE
-            nullable: false
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: f04792ba-19c8-4b1d-9725-468261ad91ff
-              stepCounter: e80b2fb1-33c1-4f16-a189-64b26bfd513a
-            config: {}
-            dataType: VARCHAR(23)
-            defaultValue: ""
-            description: ""
-            name: P_COMMENT
+            name: YEAR
             nullable: true
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('SOURCE', 'PART') }}
-      name: PART
+          joinCondition: FROM {{ ref('SOURCE', 'STAGING_SONGS') }}
+      name: STAGING_SONGS
       schema: ""
       sqlType: Source
-      table: PART
+      table: STAGING_SONGS
       type: sourceInput
-    stepCounter: e80b2fb1-33c1-4f16-a189-64b26bfd513a
+    stepCounter: 9a437bd9-ff3d-4581-8f9d-9cac9b8637c5

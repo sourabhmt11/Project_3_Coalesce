@@ -1,11 +1,17 @@
-defaultStorageMapping: TARGET
+defaultStorageMapping: SOURCE
 installedPackages: {}
 jobs: {}
 locations:
   SOURCE:
-    mappingDefinitions: {}
+    mappingDefinitions:
+      "13":
+        database: SNOWFLAKE_SONG_ANALYSYS_DATA
+        schema: SCHEMA_SRC_SONG_ANALYSYS
   TARGET:
-    mappingDefinitions: {}
+    mappingDefinitions:
+      "13":
+        database: TGT_SONG_ANALYSYS_DATA
+        schema: SCHEMA_TGT_SONG_ANALYSYS
 macros: {}
 packages: {}
 projects: {}
